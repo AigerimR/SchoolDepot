@@ -17,16 +17,13 @@ console.log(date);
 
 writeReviewBtn.addEventListener("click", function () {
   writeReviewBtn.style.display = "none";
-  // testimonialsContainer.style.opacity = "0";
   testimonialsForm.style.display = "block";
   rating.forEach((radiobtn, i) => {
     radiobtn.addEventListener("click", function (e) {
-      // console.log(i + 1, radiobtn);
       starNumber = i;
       console.log(starNumber);
       for (let s = 0; s <= i; s++) {
         labels[s].style.color = "#fd4";
-        // starIcons[s].style.color = "#fd4";
       }
     });
   });
@@ -34,7 +31,6 @@ writeReviewBtn.addEventListener("click", function () {
 postReviewBtn.addEventListener("click", function (e) {
   e.preventDefault();
   testimonialsForm.style.display = "none";
-  // let start = 0;
 
   let stars = "";
   for (let s = 0; s <= starNumber; s++) {
@@ -45,30 +41,15 @@ postReviewBtn.addEventListener("click", function (e) {
 <div class="testimonial-card">
 <div class="testimonial-card-data">
   <h4><i class="fas fa-angle-double-right"></i> ${myReviewName.value}</h4>
-  <div class="testimonial-rating">
-${stars}
-
- 
-  </div>
+  <div class="testimonial-rating">${stars}</div>
 </div>
 <p class="testimonial-review">${myReview.value}</p>
 <p class="date">${date.getDate()}/${date.getMonth()}/${date.getFullYear()}</p>
 </div>`;
 
-  testimonialsContainer.insertAdjacentHTML("afterend", html);
+  testimonialsContainer.insertAdjacentHTML("afterbegin", html);
   console.log(stars);
   labels.forEach((l) => (l.style.color = "var(--primary-color)"));
   myReviewName.value = myReview.value = myReviewEmail.value = "";
   writeReviewBtn.style.display = "block";
-  // testimonialsContainer.style.display = "block";
-
-  // testimonialRating.appendChild(radiobtn);
 });
-
-// ${labels.forEach((l) => l)}
-// {/* */}
-// for (let s = 0; s <= starNumber; s++) {
-//   testimonialRating.appendChild(`<i class="fas fa-star star-icon"></i>`);
-// console.log(satrIcons[s]);
-// starIcons[s].style.color = "#fd4";
-// starIcons[s].style.color = "#fd4";

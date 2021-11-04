@@ -1,3 +1,147 @@
+@media (max-width: 1024px) {
+  /* INDEX PAGE */
+  #main-nav,
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #main-nav .goto-cart {
+    margin-left: 1.5rem;
+  }
+
+  .offers img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .offers {
+    overflow: hidden;
+    margin: 1rem 0;
+    height: 100%;
+  }
+  .offers-slider {
+    column-gap: 1rem;
+    animation: slide 15s ease-in-out 2s infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(105vw);
+    }
+    10% {
+      transform: translateX(105vw);
+    }
+    20% {
+      transform: translateX(0vw);
+    }
+    30% {
+      transform: translateX(0vw);
+    }
+    40% {
+      transform: translateX(0vw);
+    }
+    50% {
+      transform: translateX(-105vw);
+    }
+    60% {
+      transform: translateX(-105vw);
+    }
+    70% {
+      transform: translateX(-105vw);
+    }
+    80% {
+      transform: translateX(0vw);
+    }
+    90% {
+      transform: translateX(0vw);
+    }
+    100% {
+      transform: translateX(105vw);
+    }
+  }
+
+  /* TESTIMONIALS PAGE */
+  .testimonials button {
+    height: 3.5rem;
+    width: 50%;
+    margin: auto auto 1rem auto;
+  }
+  .testimonials-form,
+  .testimonials .input {
+    width: 100%;
+  }
+
+  /* CONTUCT US PAGE */
+  .contact-us-container img {
+    padding-right: 1rem;
+  }
+
+  /* SHOPPING CART PAGE */
+  .cart-container {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .inside-cart {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inside-cart img {
+    height: 120px;
+    margin: auto;
+  }
+  .remove,
+  .inside-cart .book-info,
+  .inside-cart .price {
+    margin-top: 0;
+  }
+  .inside-cart .quantity {
+    align-self: baseline;
+  }
+
+  .inside-cart .adjust,
+  .inside-cart .btn-dark {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+  .total-price {
+    float: none;
+    margin: auto;
+  }
+  .promo {
+    margin: 0;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .promo .input {
+    margin: auto;
+    width: 55%;
+  }
+  .apply-promo {
+    width: 30%;
+  }
+  #mypromo {
+    padding: 0;
+  }
+  .checkout {
+    width: 100%;
+    margin: 2rem auto auto auto;
+  }
+  /* GET A QUOTE PAGE */
+  .get-quote-container {
+    column-gap: 1rem;
+  }
+
+  .get-quote .input,
+  .get-quote button {
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
 @media (max-width: 768px) {
   /* INDEX page */
   /* #main-nav, */
@@ -16,9 +160,12 @@
   footer {
     grid-template-columns: 1fr;
   }
+  #main-nav .goto-cart {
+    margin-left: 6rem;
+  }
   #main-nav {
     padding-right: 0.2rem;
-    /* padding-left: 4rem; */
+    padding-left: 10rem;
     text-align: center;
     justify-items: center;
     grid-template-columns: 3fr 1fr;
@@ -31,8 +178,6 @@
   }
   #main-nav button {
     width: 2rem;
-    /* margin-left: 0; */
-    /* margin: auto; */
   }
   #main-nav button span {
     display: none;
@@ -117,6 +262,10 @@
   #main-nav ul li {
     padding: 1rem;
   }
+
+  #main-nav ul li li {
+    padding: 0rem;
+  }
   #main-nav ul {
     background: var(--primary-dark);
     width: 100vw;
@@ -140,6 +289,8 @@
   }
   footer {
     height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   header {
@@ -154,118 +305,20 @@
     padding: 0;
   }
 
-  .offers img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .offers {
-    overflow: hidden;
-    margin: 1rem 0;
-    height: 100%;
-  }
-  .offers-slider {
-    column-gap: 1rem;
-    animation: slide 15s ease-in-out 2s infinite;
-  }
-
-  @keyframes slide {
-    0% {
-      transform: translateX(105vw);
-    }
-    10% {
-      transform: translateX(105vw);
-    }
-    20% {
-      transform: translateX(0vw);
-    }
-    30% {
-      transform: translateX(0vw);
-    }
-    40% {
-      transform: translateX(0vw);
-    }
-    50% {
-      transform: translateX(-105vw);
-    }
-    60% {
-      transform: translateX(-105vw);
-    }
-    70% {
-      transform: translateX(-105vw);
-    }
-    80% {
-      transform: translateX(0vw);
-    }
-    90% {
-      transform: translateX(0vw);
-    }
-    100% {
-      transform: translateX(105vw);
-    }
-  }
-
   .bestsellerscards {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     flex-direction: column;
     row-gap: 1rem;
-    /* column-gap: 1rem;
-    align-items: center;
-    justify-content: center; */
   }
-  /* 
-  .bestsellerscards {
-    overflow: hidden;
-  } */
-
-  /* .bestsellers-slider {
-    margin-left: 4rem;
-    margin-right: 4rem;
-    column-gap: 6rem;
-    animation: slideOffers 20s ease-in 5s infinite;
-  } */
-  /* @keyframes slideOffers {
-    0% {
-      transform: translateX(125vw);
-    }
-    10% {
-      transform: translateX(62vw);
-    }
-    20% {
-      transform: translateX(-25vw);
-    }
-    30% {
-      transform: translateX(-125vw);
-    }
-    40% {
-      transform: translateX(-125vw);
-    }
-    60% {
-      transform: translateX(-25vw);
-    }
-    80% {
-      transform: translateX(62vw);
-    }
-    100% {
-      transform: translateX(125vw);
-    }
-  } */
 
   /* TESTIMONIALS PAGE */
   .testimonials button {
-    height: 3.5rem;
-    width: 100%;
-    margin: auto auto 1rem auto;
-  }
-  .testimonials-form,
-  .testimonials .input {
     width: 100%;
   }
 
   /* ABOUT US PAGE */
   .about-us {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .about-container {
     width: 100%;
@@ -303,93 +356,26 @@
     margin-left: 0;
     margin-bottom: 0;
   }
-
+  .contacts p {
+    margin-top: 0.2rem;
+  }
   /* CONTUCT US PAGE */
   .contact-us-container img {
-    display: none;
-  }
-  .contact-us-info {
-    text-align: left;
-    padding-left: 1rem;
-    width: 100vw;
-  }
-  .contact-us-container {
-    flex-direction: column;
+    height: 200px;
+    width: 290px;
+    padding-right: 1rem;
   }
   .contact-us-bottom {
     margin-top: 1rem;
     height: 100%;
     padding: 1rem;
   }
-  /* SHOPPING CART PAGE */
-  .cart-container {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .inside-cart {
-    width: 100%;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 2fr 2fr 1fr; */
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .inside-cart img {
-    height: 120px;
-    margin: auto;
-    /* float: left; */
-  }
-  .remove,
-  .inside-cart .book-info,
-  .inside-cart .price {
-    margin-top: 0;
-  }
-  .inside-cart .quantity {
-    align-self: baseline;
-  }
-
-  .inside-cart .adjust,
-  .inside-cart .btn-dark {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 1rem;
-  }
-  .total-price {
-    float: none;
-    margin: auto;
-  }
-  .promo {
-    margin: 0;
-    /* display: grid; */
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  /* .promoarea {
-    display: flex;
-    justify-content: center;
-  } */
-  .promo .input {
-    margin: auto;
-    width: 55%;
-  }
-  .apply-promo {
-    width: 30%;
-  }
-  #mypromo {
-    padding: 0;
-  }
-  .checkout {
-    width: 100%;
-    margin: 2rem auto auto auto;
-  }
 
   /* GET A QUOTE PAGE */
   .get-quote-container {
     flex-direction: column;
+    row-gap: 2rem;
   }
-
   .quote-offer {
     width: 100%;
     padding: 0;
@@ -400,11 +386,6 @@
     margin-top: 0;
   }
 
-  .get-quote .input,
-  .get-quote button {
-    width: 100%;
-    margin: 1rem auto;
-  }
   .quote-input {
     padding: 0;
   }
@@ -418,5 +399,96 @@
   }
   .add-pages-right-container {
     width: 100vw;
+  }
+  main h2 {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  /* TESTIMONIALS PAGE */
+  .testimonials-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonial-card {
+    width: 45vw;
+  }
+
+  /* CONTUCT US PAGE */
+  .contact-us-container img {
+    display: none;
+  }
+  .contact-us-info {
+    text-align: left;
+    padding-left: 2rem;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 375px) {
+  /* INDEX PAGE */
+  #main-nav .goto-cart {
+    margin-left: 0rem;
+  }
+  #main-nav {
+    padding-left: 5rem;
+  }
+  /* TESTIMONIALS PAGE */
+  .testimonials-container {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-card {
+    width: 90vw;
+  }
+  /* SHOPPING CART PAGE */
+  .promoarea {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .apply-promo {
+    margin: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  /* INDEX PAGE */
+  #main-nav {
+    padding-left: 4rem;
+  }
+  /* CONTUCT US PAGE */
+  .contact-us-container {
+    flex-direction: column;
+  }
+  .contact-us-bottom {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 320px) {
+  #main-nav {
+    padding-left: 1.5rem;
+  }
+  #main-nav .logo {
+    margin-left: 3rem;
+  }
+  footer ul {
+    flex-direction: column;
+  }
+  footer ul li:nth-child(n + 2)::before {
+    content: "";
+  }
+  /* CONTUCT US PAGE */
+  .contact-us-info {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 280px) {
+  /* INDEX */
+  #main-nav {
+    padding-left: 0.5rem;
+  }
+  /* ABOUT US */
+  .contacts p {
+    margin-top: 0rem;
   }
 }

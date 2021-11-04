@@ -25,6 +25,7 @@ main h2 {
   font-size: 1.8rem;
   text-shadow: none;
   text-align: center;
+  margin: 1rem;
 }
 
 .add-pages-container ul {
